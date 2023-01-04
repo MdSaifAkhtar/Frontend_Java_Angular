@@ -1,0 +1,25 @@
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">SID</th>
+        <th scope="col">Student Name</th>
+        <th scope="col">Student Email</th>
+        <th scope="col">Student Phone</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let stu of students">
+        <th scope="row">{{stu.id}}</th>
+        <td>{{stu.name}}</td>
+        <td>{{stu.email}}</td>
+        <td>{{stu.phone}}</td>
+        <td>
+            <button  (click)="updateStudent(stu.id)" class="btn btn-info">Update</button>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
